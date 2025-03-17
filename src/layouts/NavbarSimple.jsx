@@ -10,7 +10,7 @@ import {
   IconSettings,
   IconSwitchHorizontal,
 } from '@tabler/icons-react';
-import classes from './NavbarSimple.module.css';
+import classes from '../styles/NavbarSimple.module.css';
 
 const data = [
   { link: '', label: 'Inicio', icon: IconBellRinging },
@@ -43,18 +43,6 @@ export function NavbarSimple() {
     <nav className={classes.navbar}>
       <div className={classes.navbarMain}>
         {links}
-      </div>
-
-      <div className={classes.footer}>
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
-          <span>Change account</span>
-        </a>
-
-        <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <IconLogout className={classes.linkIcon} stroke={1.5} />
-          <span>Logout</span>
-        </a>
       </div>
     </nav>
   );

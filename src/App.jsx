@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css'
-import { MantineProvider, Container} from '@mantine/core'
+import { MantineProvider, Container } from '@mantine/core'
+import AppRoutes from './router/routes'
 import { BrowserRouter as Router } from 'react-router'
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
   return (
     <MantineProvider defaultColorScheme="auto" withGlobalClass>
       <Container fluid={true}>
-      <Router>
-        <h1>Hello Mantine!</h1>
-      </Router>
+        <Router>
+          <AppRoutes />
+        </Router>
       </Container>
 
     </MantineProvider>

@@ -1,11 +1,13 @@
+import { Flex } from '@mantine/core';
 import React from 'react';
 
 const Home = () => {
     return (
-        <div>
-            <h1>Welcome to the Home Page</h1>
-            <p>This is a simple home page.</p>
-        </div>
+        <Flex align="center" justify="center" > 
+            <h1>Esta sera una pagina simple </h1>
+            <p>Configurable para libre uso</p>
+            <p>Sin Barra de navegacion</p>
+        </Flex>
     );
 };
 
