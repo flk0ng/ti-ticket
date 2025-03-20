@@ -1,13 +1,12 @@
-import { Flex } from '@mantine/core';
+import { Container, Title, Text } from '@mantine/core';
 import React from 'react';
 
 const Home = () => {
     return (
-        <Flex align="center" justify="center" > 
-            <h1>Esta sera una pagina simple </h1>
-            <p>Configurable para libre uso</p>
-            <p>Sin Barra de navegacion</p>
-        </Flex>
+        <Container align="center" justify="center" > 
+            <Title order={1} >Pagina principal </Title>
+            <Text order={2} >Bienvenido a la pagina principal</Text>
+        </Container>
     );
 };
 
