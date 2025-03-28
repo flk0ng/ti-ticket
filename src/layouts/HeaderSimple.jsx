@@ -2,12 +2,15 @@ import { useState } from 'react';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from '../styles/HeaderSimple.module.css';
+import { NavLink } from 'react-router';
 
 const links = [
-  { link: '/about', label: 'Features' },
-  { link: '/pricing', label: 'Pricing' },
-  { link: '/learn', label: 'Learn' },
-  { link: '/community', label: 'Community' },
+  { link: '/', label: 'Inicio' },
+  { link: '/users', label: 'Usuarios' },
+  { link: '/pricing', label: 'Office' },
+  { link: '/learn', label: 'Windows' },
+  { link: '/community', label: 'Equipos' },
+  { link: '/more', label: '+' },
 ];
 
 export function HeaderSimple() {
@@ -15,18 +18,19 @@ export function HeaderSimple() {
   const [active, setActive] = useState(links[0].link);
 
   const items = links.map((link) => (
-    <a
+    <NavLink
       key={link.label}
-      href={link.link}
+      to={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-        event.preventDefault();
+      onClick={() => {
         setActive(link.link);
+        toggle();
       }}
     >
       {link.label}
-    </a>
+    </NavLink>
+    
   ));
 
   return (

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Anchor, Container, Group } from '@mantine/core';
+import { Container, Group } from '@mantine/core';
 import classes from '../styles/FooterSimple.module.css';
+import { NavLink } from 'react-router';
 
 const links = [
-  { link: '#', label: 'Contact' },
+  { link: '/contact', label: 'Contact' },
   { link: '#', label: 'Privacy' },
   { link: '#', label: 'Blog' },
   { link: '#', label: 'Careers' },
@@ -11,15 +12,13 @@ const links = [
 
 export function FooterSimple() {
   const items = links.map((link) => (
-    <Anchor<'a'>
-      c="dimmed"
+    <NavLink
       key={link.label}
-      href={link.link}
-      onClick={(event) => event.preventDefault()}
-      size="sm"
+      to={link.link}
+      className={classes.link}
     >
       {link.label}
-    </Anchor>
+    </NavLink>
   ));
 
   return (
